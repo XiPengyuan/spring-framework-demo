@@ -12,11 +12,13 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <springframework.version>6.1.2</springframework.version>
     </properties>
 
     <modules>
         <module>instrumentation-agent-demo</module>
         <module>mybatis-plus-demo</module>
+        <module>spring-data-jpa-demo</module>
     </modules>
 
     <dependencyManagement>
@@ -24,17 +26,17 @@
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
-                <version>6.1.2</version>
+                <version>${springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
-                <version>6.1.2</version>
+                <version>${springframework.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
-                <artifactId>spring-tx</artifactId>
-                <version>6.1.2</version>
+                <artifactId>spring-test</artifactId>
+                <version>${springframework.version}</version>
             </dependency>
 
             <dependency>
@@ -65,27 +67,21 @@
                 <artifactId>mysql-connector-j</artifactId>
                 <version>8.1.0</version>
             </dependency>
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>5.0.1</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
                 <version>5.10.1</version>
             </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-test</artifactId>
-                <version>6.1.2</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <dependencies>
-        <!-- Spring Framework -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
-        </dependency>
-
         <!-- Logger -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
@@ -99,7 +95,7 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- Only for test -->
+        <!-- ========== Only for test ========== -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
