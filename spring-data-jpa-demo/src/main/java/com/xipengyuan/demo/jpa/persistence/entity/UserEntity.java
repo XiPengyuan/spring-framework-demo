@@ -26,4 +26,8 @@ public class UserEntity {
     private Grade grade;
 
     private String email;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "residence")
+    private AddressEntity residence;
 }
