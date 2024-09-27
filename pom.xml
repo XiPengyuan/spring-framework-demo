@@ -12,7 +12,7 @@
         <maven.compiler.release>17</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <springframework.version>6.1.10</springframework.version>
+        <springframework.version>6.1.13</springframework.version>
     </properties>
 
     <modules>
@@ -47,30 +47,23 @@
                 <version>${springframework.version}</version>
             </dependency>
 
-            <!-- Apache Commons -->
-            <dependency>
-                <groupId>org.apache.commons</groupId>
-                <artifactId>commons-lang3</artifactId>
-                <version>3.14.0</version>
-            </dependency>
-
             <!-- Logger -->
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
-                <version>2.0.13</version>
+                <version>2.0.16</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
                 <artifactId>logback-classic</artifactId>
-                <version>1.5.6</version>
+                <version>1.5.8</version>
             </dependency>
 
             <!-- Lombok -->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
-                <version>1.18.32</version>
+                <version>1.18.34</version>
             </dependency>
 
             <!-- MySQL JDBC Driver -->
@@ -90,27 +83,27 @@
             <dependency>
                 <groupId>org.hibernate.orm</groupId>
                 <artifactId>hibernate-core</artifactId>
-                <version>6.5.2.Final</version>
+                <version>6.5.3.Final</version>
             </dependency>
 
             <!-- Spring Data JPA -->
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-jpa</artifactId>
-                <version>3.3.1</version>
+                <version>3.3.4</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework.amqp</groupId>
                 <artifactId>spring-rabbit</artifactId>
-                <version>3.1.6</version>
+                <version>3.1.7</version>
             </dependency>
 
             <!-- JUnit -->
             <dependency>
                 <groupId>org.junit.jupiter</groupId>
                 <artifactId>junit-jupiter</artifactId>
-                <version>5.10.2</version>
+                <version>5.10.3</version>
             </dependency>
             <!-- AssertJ -->
             <dependency>
