@@ -16,7 +16,7 @@ import javax.sql.DataSource;
 @Configuration
 @Import(DataSourceConfig.class)
 @EnableJpaRepositories("com.xipengyuan.demo.jpa.persistence.repository")
-@EnableTransactionManagement
+@EnableTransactionManagement // 记得启用事务管理
 public class PersistenceConfig {
 
     @Bean
